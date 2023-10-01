@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  api:
+    # docker run -p 4000:4000 danielgatis/rembg s -p 4000
+    image: danielgatis/rembg:latest
+    container_name: rembg
+    restart: unless-stopped
+    command: s -p 4000
+    ports:
+      - "4000:4000"
